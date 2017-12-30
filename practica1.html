@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eliezer Temoltzi</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Tutorial Republic</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="practica1.html">Home</a></li>
+                        <li><a href="users.html">Users</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Eliezer Temoltzi Exercise 1</h1>
+                <p>In this practice, I will use bootstrap to make my page responsive, I also inclded Jquey and getting some data from a public API to add more functionality to the page.</p>
+                <p><a href="users.html" class="btn btn-success btn-lg">Go to Users</a></p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h2>HTML</h2>
+                    <p>HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h2>CSS</h2>
+                    <p>CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.</p>
+                    
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h2>Bootstrap</h2>
+                    <p>Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can create web your own website with much less efforts.</p>
+                    
+                </div>
+                <div class="clearfix visible-md-block"></div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h2>JavaScript</h2>
+                    <p>JavaScript, often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.</p>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h2>JQuery</h2>
+                    <p>Query is a concise and fast JavaScript library that can be used to simplify event handling, HTML document traversing, Ajax interactions and animation for speedy website development.</p>
+
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <h2>OOP</h2>
+                    <p>Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.</p>
+
+                </div>
+            </div>            
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+            
+            var root = 'https://jsonplaceholder.typicode.com';
+
+            $.ajax({
+                url: root + '/users/1',
+                method: 'GET'
+            }).then(function(data) {
+                console.log(data);
+            });
+        });
+        </script>
+    </body>
+</html>
